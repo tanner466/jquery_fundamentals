@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Book List</title>
+</head>
+<body>
+  <h1>The Book List</h1>
+
+  <script>
+    var books = [
+      {title: "The Hobbit",
+      author: "J.R.R. Tolkien",
+      alreadyRead: false
+      },
+      {title: "Moneyball",
+      author: "Michael Lewis",
+      alreadyRead: true
+      },
+      {title: "The Game",
+      author: "Ken Dryden",
+      alreadyRead: true
+      },
+      {title: "The Big Short",
+      author: "Michael Lewis",
+      alreadyRead: false
+      }
+
+    ];
+
+    books[0]["cover"] = "http://www.tolkienshop.com/contents/media/0006754023.jpg";
+    books[1]["cover"] = "https://upload.wikimedia.org/wikipedia/en/c/cd/Moneyballsbn.jpg";
+    books[2]["cover"] = "http://ecx.images-amazon.com/images/I/515c9R0ilbL.jpg";
+    books[3]["cover"] = "http://ecx.images-amazon.com/images/I/81wBzBcSclL.jpg";
+
+    var pageNode = document.getElementsByTagName('body')[0];
+    var ul = document.createElement('ul');
+    for (var i=0; i<books.length; i++) {
+      var li = document.createElement('li');
+      var paragraphText = document.createTextNode('Title: ' + books[i].title + ", Author: " + books[i].author);
+      li.appendChild(paragraphText);
+      var newImg = document.createElement("img");
+      newImg.src = books[i].cover;
+      li.appendChild(newImg);
+      if (books[i].alreadyRead) {
+        li.setAttribute("class", "read");
+      }
+      else {
+        li.setAttribute("class", "unread");
+      }
+      ul.appendChild(li);
+    }
+    pageNode.appendChild(ul);
+    var readBooks = document.getElementsByClassName('read');
+    for (var i=0; i<readBooks.length; i++) {
+      readBooks[i].style.color="red";
+    }
+    var unreadBooks = document.getElementsByClassName('unread');
+    for (var i=0; i<readBooks.length; i++) {
+      unreadBooks[i].style.color="green";
+    }
+  </script>
+
+</body>
+</html>
