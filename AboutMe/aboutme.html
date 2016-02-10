@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>About Me</title>
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span>
+      <li>Favorites:  <span id="favorites"></span>
+      <li>Hometown: <span id="hometown"></span>
+    </ul>
+
+    <script>
+      var pageNode = document.getElementsByTagName('body')[0];
+      pageNode.style.fontFamily = "Arial, sans-serif";
+      var nickname = document.getElementById("nickname");
+      nickname.innerHTML = "TBone";
+      var favorites = document.getElementById("favorites");
+      favorites.innerHTML = "<ul><li>Sports</li><li>Music</li></ul>";
+      var hometown = document.getElementById("hometown");
+      hometown.innerHTML = "London, ON";
+      var listItems = document.getElementsByTagName('li');
+      for (var i =0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+        listItem.style.color = "red";
+      }
+      var newImg = document.createElement('img');
+      newImg.src = 'https://bitmakerlabs.s3.amazonaws.com/hiring_board/production/uploads/student/photo/909/medium_IMG_1388.jpg';
+      newImg.style.border = '1px solid black';
+      pageNode.appendChild(newImg);
+    </script>
+
+  </body>
+</html>
