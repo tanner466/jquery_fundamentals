@@ -1,0 +1,68 @@
+html {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.35;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+label {
+	display: block;
+}
+
+.parent {
+	width: 100%;
+	min-height: 200px;
+	border: 5px solid #333;
+	background-color: #ccffcc;
+	margin-bottom: 10px;
+}
+
+.child {
+	display: block;
+	color: black;
+	background-color: #ffcccc;
+	margin: 10px;
+	border: 1px solid #333;
+	padding: 5px;
+}
+
+#step-4,
+#step-7,
+#step-14 {
+	overflow: auto;
+	margin-bottom: 10px;
+}
+
+#step-8,
+#step-12 {
+	width: 50%;
+}
+
+.target-4 {
+	float: left;
+	width: 33.33333333%;
+}
+
+.target-7 {
+	float: left;
+	width: 50%;
+}
+
+.target-14 {
+	float: left;
+	width: 25%;
+}
